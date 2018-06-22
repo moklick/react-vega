@@ -18,6 +18,7 @@ const propTypes = {
   data: PropTypes.object,
   onNewView: PropTypes.func,
   onParseError: PropTypes.func,
+  tooltip: PropTypes.func
 };
 
 const defaultProps = {
@@ -145,6 +146,7 @@ class Vega extends React.Component {
           'renderer',
           'logLevel',
           'background',
+          'tooltip'
         ]
           .filter(field => isDefined(props[field]))
           .forEach((field) => { view[field](props[field]); });
